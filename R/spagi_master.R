@@ -687,7 +687,7 @@ get_ppi_for_molecules<-function(RP.protein, KN.protein, TF.protein, species, sco
   ##get ppi interactions for molecules
   if(species=="mmusculus"){
     #initiate the connection, id  10090 for mouse
-    string_db_mouse <- STRINGdb$new(version="10", species=10090, score_threshold=0, input_directory="stringdb_mouse" )
+    string_db_mouse <- STRINGdb$new(version="11", species=10090, score_threshold=0, input_directory="stringdb_mouse" )
     #now combine all the protein
     all.protein<-unique(c(RP.protein, KN.protein, TF.protein))
     #make a data frame from all the protein
@@ -701,7 +701,7 @@ get_ppi_for_molecules<-function(RP.protein, KN.protein, TF.protein, species, sco
   }
   else if(species=="hsapiens"){
     #initiate the connection, id  9606 for human
-    string_db_human <- STRINGdb$new(version="10", species=9606, score_threshold=0, input_directory="stringdb_human" )
+    string_db_human <- STRINGdb$new(version="11", species=9606, score_threshold=0, input_directory="stringdb_human" )
     #now combine all the protein and make uppercase
     all.protein<-toupper(unique(c(RP.protein, KN.protein, TF.protein)))
     #make a data frame from all the protein
